@@ -1,0 +1,9 @@
+*/**/*abi.json
+*/**/*compiled.json
+*/**/*.txt
+
+*/**/.pytest_cache
+*/**/__pycache__
+.pytest_cache
+
+contracts/account.json
