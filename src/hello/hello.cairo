@@ -28,6 +28,7 @@ mod HelloAccount {
 
     // TODO(ilya): Support raw_output attribute.
     #[external]
+    #[raw_output]
     fn __execute__(
         contract_address: ContractAddress, entry_point_selector: felt, calldata: Array::<felt>
     ) -> Array::<felt> {

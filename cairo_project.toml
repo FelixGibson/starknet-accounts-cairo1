@@ -1,0 +1,2 @@
+[crate_roots]
+starknet_accounts_cairo1 = "src"
