@@ -1,8 +1,7 @@
 #[account_contract]
 mod HelloAccount {
-    use array::SpanTrait;
-    use ecdsa::check_ecdsa_signature;
     use starknet::ContractAddress;
+    use core::felt;
 
     struct Storage {
     }
@@ -11,22 +10,22 @@ mod HelloAccount {
     fn __validate_deploy__(
         class_hash: felt, contract_address_salt: felt, public_key_: felt
     ) -> felt {
-        // Note that the storage var is not set at this point, so we need to take the public
-        // key from the arguments.
+        starknet::VALIDATED
     }
 
     #[external]
     fn __validate_declare__(class_hash: felt) -> felt {
+        starknet::VALIDATED
     }
 
     #[external]
     fn __validate__(
         contract_address: ContractAddress, entry_point_selector: felt, calldata: Array::<felt>
     ) -> felt {
+        starknet::VALIDATED
     }
 
 
-    // TODO(ilya): Support raw_output attribute.
     #[external]
     #[raw_output]
     fn __execute__(
