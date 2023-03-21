@@ -5,3 +5,6 @@ description = "Workshop to learn the basics of Cairo."
 
 [[target.starknet-contract]]
 name = "contracts"
+
+[dependencies]
+core = { path = "/home/felix/software/blockchain/starknet/cairo/corelib" }
